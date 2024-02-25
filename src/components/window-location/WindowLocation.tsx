@@ -6,12 +6,6 @@ import { TextCard, Note } from "../global-styled.tsx";
 const WindowLocation: React.FC<IWindowLocationProps> = () => {
   const location = window.location;
 
-  console.log(location);
-
-  function sendData(e: React.SyntheticEvent, data: string) {
-    location.search = data;
-  }
-
   return (
     <>
       <TextCard>
