@@ -1,13 +1,12 @@
-import { useEffect } from "react";
 import * as Styled from "./HomeContainer.styled";
+import WindowHeight from "../../components/window-height";
 
 const HomeContainer = () => {
-  useEffect(() => {
-    console.log(window.innerHeight);
-    console.log(window.outerHeight);
-  }, []);
-
-  return <Styled.HomeContainer>HomeContainer</Styled.HomeContainer>;
+  return (
+    <Styled.HomeContainer>
+      <WindowHeight />
+    </Styled.HomeContainer>
+  );
 };
 
 export default HomeContainer;
