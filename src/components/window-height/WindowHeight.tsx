@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IWindowHeightProps } from "./types.ts";
 import * as Styled from "./WindowHeight-styled";
+import { TextCard } from "../global-styled.tsx";
 
 const WindowHeight: React.FC<IWindowHeightProps> = () => {
   const [innnerHeight, setInnerHeight] = useState<number>(0);
@@ -32,7 +33,7 @@ const WindowHeight: React.FC<IWindowHeightProps> = () => {
 
   return (
     <>
-      <Styled.TextCard>
+      <TextCard>
         <span className="title">window.innerHeight</span>
         <span className="sub-title">Pencere İç Yüksekliği :</span>
         <span className="px">{innnerHeight}px</span>
@@ -40,8 +41,8 @@ const WindowHeight: React.FC<IWindowHeightProps> = () => {
           Yatay kaydırma çubuğunun yüksekliği de dahil olmak üzere pencerenin iç
           yüksekliğini piksel cinsinden döndürür.
         </p>
-      </Styled.TextCard>
-      <Styled.TextCard>
+      </TextCard>
+      <TextCard>
         <span className="title">window.outerHeight</span>
         <span className="sub-title">Pencere Dış Yüksekliği :</span>
         <span className="px">{outHeight}px</span>
@@ -50,8 +51,8 @@ const WindowHeight: React.FC<IWindowHeightProps> = () => {
           olmak üzere tüm tarayıcı penceresinin piksel cinsinden yüksekliğini
           döndürür.
         </p>
-      </Styled.TextCard>
-      <Styled.TextCard>
+      </TextCard>
+      <TextCard>
         <span className="title">window.innerWidth</span>
         <span className="sub-title">Pencere İç Genişliği :</span>
         <span className="px">{innerWidth}px</span>
@@ -60,8 +61,8 @@ const WindowHeight: React.FC<IWindowHeightProps> = () => {
           düzen görünüm alanının genişliği). Bu, varsa dikey kaydırma çubuğunun
           genişliğini de içerir.
         </p>
-      </Styled.TextCard>
-      <Styled.TextCard>
+      </TextCard>
+      <TextCard>
         <span className="title">window.outherWidth</span>
         <span className="sub-title">Pencere Dış Genişliği :</span>
         <span className="px">{outWidth}px</span>
@@ -71,7 +72,7 @@ const WindowHeight: React.FC<IWindowHeightProps> = () => {
           kenarlıkları / tutamaçları dahil olmak üzere tüm tarayıcı penceresinin
           genişliğini temsil eder.
         </p>
-      </Styled.TextCard>
+      </TextCard>
     </>
   );
 };
