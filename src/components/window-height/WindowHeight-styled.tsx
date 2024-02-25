@@ -5,13 +5,11 @@ export const WindowHeightLayout = styled.div`
 `;
 
 export const TextCard = styled.div`
-  margin: 10px 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 12px;
   border-radius: 8px;
   background-color: #562435;
   color: #a6d8c7;
-
+  padding: 12px;
   .title {
     font-weight: bold;
     margin-right: 4px;

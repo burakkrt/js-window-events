@@ -4,7 +4,9 @@ export const HomeContainer = styled.div`
   min-height: 100vh;
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: max-content;
+  gap: 12px;
   max-width: 90%;
   margin: auto;
 `;
