@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IWindowHeightProps } from "./types.ts";
-import * as Styled from "./WindowHeight-styled";
-import { TextCard } from "../global-styled.tsx";
+import TextCard from "../text-card/TextCard.tsx";
 
 const WindowHeight: React.FC<IWindowHeightProps> = () => {
   const [innnerHeight, setInnerHeight] = useState<number>(0);

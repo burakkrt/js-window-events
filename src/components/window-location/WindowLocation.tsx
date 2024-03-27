@@ -1,8 +1,7 @@
 import React from "react";
 import { IWindowLocationProps } from "./types.ts";
-import * as Styled from "./WindowLocation-styled";
-import { TextCard, Note } from "../global-styled.tsx";
-
+import TextCard from "../text-card/TextCard.tsx";
+import { Note } from "../global-styled.tsx";
 const WindowLocation: React.FC<IWindowLocationProps> = () => {
   const location = window.location;
 
@@ -31,12 +30,19 @@ const WindowLocation: React.FC<IWindowLocationProps> = () => {
         </p>
       </TextCard>
       <TextCard>
-        <span className="title">window.location.search(string)</span>
+        <span className="title">window.location.search</span>
         <p className="info">
           Mevcut url 'e sorgu parametresi ekleterek, sunucuya istekte bulunur.
           Örn. window.location.search("userId=5") url'e{" "}
           <Note type="info">{location.origin}/ ?userId=5</Note> şeklinde istekte
           bulunur. Eğer bir cevap dönmez ise sayfa yenilenir.
+        </p>
+      </TextCard>
+      <TextCard>
+        <span className="title">window.location.pathname</span>
+        <p className="info">
+          Örn. {location.origin}/<Note type="success">products</Note> url 'inin
+          pathname 'i olan /products 'ü verir.
         </p>
       </TextCard>
     </>
