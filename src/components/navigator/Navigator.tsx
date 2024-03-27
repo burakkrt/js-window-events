@@ -4,8 +4,6 @@ import TextCard from "../text-card/TextCard.tsx";
 import { Note } from "../global-styled.tsx";
 
 const Navigator: React.FC<INavigatorProps> = () => {
-  console.log(navigator);
-
   const { userAgent } = navigator;
 
   function getBrowserName() {
@@ -42,14 +40,15 @@ const Navigator: React.FC<INavigatorProps> = () => {
         <span className="title">navigator</span>
         <p className="info">
           Komut dosyasını çalıştıran uygulama hakkında yöntemleri ve ozellikleri
-          dondurur. Sadece okunabilir.
+          listeler. Sadece okunabilir. Tarıyıcı bilgileri, işletim sistemi
+          bilgileri, arama motoru bilgileri, versiyonlar, tarayıcı dili vb.
         </p>
       </TextCard>
       <TextCard>
         <span className="title">navigator.userAgent</span>\
         <span className="px">{navigator.userAgent}</span>
         <span className="px" style={{ display: "block", margin: "8px 0" }}>
-          Mevcut Tarayici Bilgisi : {getBrowserName()}
+          Mevcut Tarayıcı Bilgisi : {getBrowserName()}
         </span>
         <p className="info">
           navigator.userAgent.includes("...") ile gonderilen string deger eğer
@@ -57,6 +56,21 @@ const Navigator: React.FC<INavigatorProps> = () => {
           fonksiyon hazırlayabiliriz.
         </p>
         <Note type="info">{`Ornek : if (userAgent.includes("Firefox")) { return "Mozilla" }`}</Note>
+      </TextCard>
+      <TextCard>
+        <span className="title">navigator.language</span>\
+        <span className="px">{navigator.language}</span>
+        <span className="px" style={{ display: "block", margin: "8px 0" }}>
+          Mevcut Tarayıcı Dil Bilgisi : {navigator.languages}
+        </span>
+        <span className="px" style={{ display: "block", margin: "8px 0" }}>
+          Tarayıcının kullanabileceği diller :{" "}
+          <pre>{JSON.stringify(navigator.languages, undefined, 2)}</pre>
+        </span>
+        <p className="info">
+          Tarayıcının kullanıcı dil seçimini gösteren bir ülke short kodu
+          döndürür.
+        </p>
       </TextCard>
     </>
   );
